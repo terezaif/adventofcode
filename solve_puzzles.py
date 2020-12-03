@@ -21,6 +21,7 @@ all_trees = (
     get_tree_count(1, 1, input3)
     * get_tree_count(3, 1, input3)
     * get_tree_count(5, 1, input3)
+    * get_tree_count(7, 1, input3)
+    * get_tree_count(1, 2, input3)
 )
-all_trees *= get_tree_count(7, 1, input3) * get_tree_count(1, 2, input3)
 print(all_trees)
