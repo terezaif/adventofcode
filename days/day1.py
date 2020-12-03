@@ -1,14 +1,7 @@
 
-numbers = []
-with open('day1.txt', 'r') as reader:
-    # Read and print the entire file line by line
-     for line in reader:
-        numbers.append(int(line.strip()))
-
-
 SUM = 2020
 
-def get_product_of_2(numbers, SUM):
+def get_product_of_2(numbers, SUM=SUM):
     product = 0
     for index1 in range(0,len(numbers)):
         number1 = numbers[index1]
@@ -19,7 +12,7 @@ def get_product_of_2(numbers, SUM):
                 return product
     return product
 
-def get_product_of_3(numbers, SUM):
+def get_product_of_3(numbers, SUM=SUM):
     product = 0
     for index1 in range(0,len(numbers)):
         number1 = numbers[index1]
@@ -31,6 +24,3 @@ def get_product_of_3(numbers, SUM):
                     product = number1*number2*number3
                     return product
     return product
-
-print(get_product_of_2(numbers, SUM))
-print(get_product_of_3(numbers, SUM))
