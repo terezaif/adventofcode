@@ -5,6 +5,12 @@ from days.day2 import get_valid_password_policy2_count
 from days.day3 import get_tree_count
 from days.day4 import get_valid_passport_count
 from days.day4 import get_valid_passport_validation_count
+from days.day5 import get_top_seat, get_missing_seat
+
+print("Puzzle for day5:")
+input5 = get_string_input_array(path="data/day5.txt")
+print(get_top_seat(input5))
+print(get_missing_seat(input5))
 
 print("Puzzle for day4:")
 input4 = get_string_input_array(path="data/day4.txt")
