@@ -8,6 +8,25 @@ from days.day4 import get_valid_passport_validation_count
 from days.day5 import get_top_seat, get_missing_seat
 from days.day6 import get_questions_count
 from days.day6 import get_questions_everyone_count
+from days.day7 import get_count
+from days.day7 import get_count_2_2
+from days.day8 import get_acc, get_acc_2
+from days.day9 import get_first_number, get_list_ends
+
+print("Puzzle for day9:")
+input9 = get_int_input_array(path="data/day9.txt")
+print(get_first_number(25, input9))
+print(get_list_ends(556543474, input9))
+
+print("Puzzle for day8:")
+input8 = get_string_input_array(path="data/day8.txt")
+print(get_acc(input8))
+print(get_acc_2(input8))
+
+print("Puzzle for day7:")
+input7 = get_string_input_array(path="data/day7.txt")
+print(get_count(input7))
+print(get_count_2_2(input7))
 
 print("Puzzle for day6:")
 input6 = get_string_input_array(path="data/day6.txt")
