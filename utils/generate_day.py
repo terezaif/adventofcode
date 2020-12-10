@@ -22,8 +22,9 @@ def create_day_test_file(day: int):
     code = [
         f"from days.day{day} import get_count\n",
         f"from days.day{day} import get_count_2\n",
+        "from utils.reading_data import get_int_input_array\n",
         "\n",
-        "input = []\n",
+        f'input = get_string_input_array(path="test/data/day{day}.txt")\n',
         "\n",
         "def test_get_count():\n",
         "\texpected = 10\n",
@@ -63,6 +64,8 @@ def main(argv):
         return
     print("generating files for day ", day)
     cmd = f"touch data/day{day}.txt"
+    os.system(cmd)
+    cmd = f"touch test/data/day{day}.txt"
     os.system(cmd)
     create_day_file(day)
     create_day_test_file(day)
