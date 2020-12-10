@@ -1,6 +1,6 @@
 import pytest
-from days.day7 import get_count
-from days.day7 import get_count_2_2
+from days.day7 import get_bags
+from days.day7 import get_bags_2
 from utils.reading_data import get_string_input_array
 
 input = [
@@ -28,24 +28,24 @@ input3 = get_string_input_array(path="test/data/day7.txt")
 
 def test_get_count():
     expected = 4
-    actual = get_count(input)
+    actual = get_bags(input)
     assert expected == actual
 
 
 def test_get_count_2():
     expected = 32
-    actual = get_count_2_2(input)
+    actual = get_bags_2(input)
     assert expected == actual
 
 
 def test_get_count_2_2():
     expected = 126
-    actual = get_count_2_2(input2)
+    actual = get_bags_2(input2)
     assert expected == actual
 
 
 @pytest.mark.skip(reason="cannot work")
 def test_get_count_2_t():
     expected = 1151
-    actual = get_count_2_2(input3)
+    actual = get_bags_2(input3)
     assert expected == actual

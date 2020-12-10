@@ -6,7 +6,7 @@ bagreg_numbers = r"(\d*)\s*(\w+\s*\w+)\s*bag."
 nobag = "no other"
 
 
-def get_count(input: list) -> int:
+def get_bags(input: list) -> int:
     rules = []
     bags_with = set()
     for rule in input:
@@ -41,7 +41,7 @@ def parse_rules(rules, bags_with):
     return new_rules, bags_w
 
 
-def get_count_2_2(input: list) -> int:
+def get_bags_2(input: list) -> int:
     final_count = 0
     rules = []
     bags_gold = {}
