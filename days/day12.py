@@ -10,16 +10,12 @@ def get_add_vectors(first, second):
 
 
 def rotate(unit, dir, angle):
-    if dir == "R" and angle == "90":
-        return [unit[1], unit[0] * -1]
-    elif dir == "L" and angle == "90":
-        return [unit[1] * -1, unit[0]]
-    elif dir in ["R", "L"] and angle == "180":
+    if angle == "180":
         return [unit[0] * -1, unit[1] * -1]
-    elif dir == "R" and angle == "270":
-        return [unit[1] * -1, unit[0]]
-    elif dir == "L" and angle == "270":
+    elif dir + angle in ["L270", "R90"]:
         return [unit[1], unit[0] * -1]
+    elif dir + angle in ["R270", "L90"]:
+        return [unit[1] * -1, unit[0]]
 
 
 def get_distance(input: list) -> int:
