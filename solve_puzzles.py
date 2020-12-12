@@ -1,4 +1,9 @@
-from utils.reading_data import get_int_input_array, get_string_input_array
+from utils.reading_data import (
+    get_int_input_array,
+    get_string_input_array,
+    get_string_input_matrix_w_padding,
+    get_string_input_matrix_r,
+)
 from days.day1 import get_product_of_2, get_product_of_3
 from days.day2 import get_valid_password_count
 from days.day2 import get_valid_password_policy2_count
@@ -14,6 +19,24 @@ from days.day8 import get_acc, get_acc_2
 from days.day9 import get_first_number, get_list_ends
 from days.day10 import get_diff
 from days.day10 import get_diff_2
+from days.day11 import get_seat_count
+from days.day11 import get_seat_count_2
+from days.day12 import get_distance
+from days.day12 import get_distance_2
+
+print("Puzzle for day12:")
+regex = r"(\w)(\d*)"
+input12 = get_string_input_matrix_r(path="data/day12.txt", regex=regex)
+
+print(get_distance(input12))
+print(get_distance_2(input12))
+
+
+# print("Puzzle for day11:")
+# input11 = get_string_input_matrix_w_padding(path="data/day11.txt")
+# print(get_seat_count(input11))
+# input11 = get_string_input_matrix_w_padding(path="data/day11.txt")
+# print(get_seat_count_2(input11))
 
 print("Puzzle for day10:")
 input10 = get_int_input_array(path="data/day10.txt")
