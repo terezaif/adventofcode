@@ -22,7 +22,7 @@ def create_day_test_file(day: int):
     code = [
         f"from days.day{day} import get_count\n",
         f"from days.day{day} import get_count_2\n",
-        "from utils.reading_data import get_int_input_array\n",
+        "from utils.reading_data import get_string_input_array\n",
         "\n",
         f'input = get_string_input_array(path="test/data/day{day}.txt")\n',
         "\n",

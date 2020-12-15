@@ -1,3 +1,4 @@
+import pytest
 from days.day11 import get_seat_count
 from days.day11 import get_seat_count_2
 from utils.reading_data import (
@@ -13,6 +14,7 @@ def test_get_seat_count():
     assert expected == actual
 
 
+@pytest.mark.skip(reason="takes too long")
 def test_get_seat_count_2():
     input = get_string_input_matrix(path="test/data/day11.txt")
     expected = 26

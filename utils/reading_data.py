@@ -53,3 +53,22 @@ def get_string_input_matrix_r(path: str, regex: str) -> list:
             elems = list(re.findall(regex, line.strip())[0])
             strings.append(elems)
     return strings
+
+
+def get_string_input_matrix_r_w_offset(path: str, regex: str, regex2: str) -> list:
+    strings = []
+    masks = []
+    with open(path, "r") as reader:
+        # Read and print the entire file line by line
+        for line in reader:
+            r1 = re.findall(regex, line.strip())
+            r2 = re.findall(regex2, line.strip())
+            if r1 != []:
+                if len(masks) > 0:
+                    strings.append(masks)
+                masks = []
+                masks.append(r1[0])
+            else:
+                masks.append(list(r2[0]))
+    strings.append(masks)
+    return strings

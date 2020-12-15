@@ -3,6 +3,7 @@ from utils.reading_data import (
     get_string_input_array,
     get_string_input_matrix_w_padding,
     get_string_input_matrix_r,
+    get_string_input_matrix_r_w_offset,
 )
 from days.day1 import get_product_of_2, get_product_of_3
 from days.day2 import get_valid_password_count
@@ -23,6 +24,30 @@ from days.day11 import get_seat_count
 from days.day11 import get_seat_count_2
 from days.day12 import get_distance
 from days.day12 import get_distance_2
+from days.day13 import get_bus
+from days.day13 import get_bus_2
+from days.day14 import get_memsum
+from days.day14 import get_memsum_2
+from days.day15 import get_nth_spoken
+
+print("Puzzle for day15:")
+input15 = get_string_input_array(path="data/day15.txt")
+print(get_nth_spoken(input15))
+# print(get_nth_spoken(input15, 30000000))
+
+print("Puzzle for day14:")
+regmask = r"mask = (.+)"
+regex2 = r"mem\[(\d+)\] = (\d+)"
+input14 = get_string_input_matrix_r_w_offset(
+    path="data/day14.txt", regex=regmask, regex2=regex2
+)
+print(get_memsum(input14))
+print(get_memsum_2(input14))
+
+print("Puzzle for day13:")
+input13 = get_string_input_array(path="data/day13.txt")
+print(get_bus(input13))
+print(get_bus_2(input13))
 
 print("Puzzle for day12:")
 regex = r"(\w)(\d*)"
