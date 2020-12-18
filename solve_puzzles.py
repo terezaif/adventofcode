@@ -32,16 +32,22 @@ from days.day15 import get_nth_spoken
 from days.day16 import get_sum_wrong
 from days.day16 import get_prod_right
 from days.day17 import get_active_cubes
+from days.day18 import get_sum_arithmetics
 
-print("Puzzle for day17:")
-input17 = get_string_input_array(path="data/day17.txt")
-print(get_active_cubes(input17))
-print(get_active_cubes(input17, 2))
+print("Puzzle for day18:")
+input18 = get_string_input_array(path="data/day18.txt")
+print(get_sum_arithmetics(input18))
+print(get_sum_arithmetics(input18, True))
 
-print("Puzzle for day16:")
-input16 = get_string_input_array(path="data/day16.txt")
-print(get_sum_wrong(input16))
-print(get_prod_right(input16, "departure"))
+# print("Puzzle for day17:")
+# input17 = get_string_input_array(path="data/day17.txt")
+# print(get_active_cubes(input17))
+# print(get_active_cubes(input17, 2))
+
+# print("Puzzle for day16:")
+# input16 = get_string_input_array(path="data/day16.txt")
+# print(get_sum_wrong(input16))
+# print(get_prod_right(input16, "departure"))
 
 
 # print("Puzzle for day15:")
