@@ -33,11 +33,18 @@ from days.day16 import get_sum_wrong
 from days.day16 import get_prod_right
 from days.day17 import get_active_cubes
 from days.day18 import get_sum_arithmetics
+from days.day19 import get_msg_count
+from days.day19 import get_msg_count_2
 
-print("Puzzle for day18:")
-input18 = get_string_input_array(path="data/day18.txt")
-print(get_sum_arithmetics(input18))
-print(get_sum_arithmetics(input18, True))
+print("Puzzle for day19:")
+input19 = get_string_input_array(path="data/day19.txt")
+print(get_msg_count(input19))
+print(get_msg_count_2(input19))
+
+# print("Puzzle for day18:")
+# input18 = get_string_input_array(path="data/day18.txt")
+# print(get_sum_arithmetics(input18))
+# print(get_sum_arithmetics(input18, True))
 
 # print("Puzzle for day17:")
 # input17 = get_string_input_array(path="data/day17.txt")
