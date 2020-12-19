@@ -93,12 +93,13 @@ def get_msg_count_2(input: list) -> int:
                 if chunk in pos_42 or chunk in pos_31
             ]
             if (
-                len(s) == len(chunks)
-                and s[0] == 1
+                len(s) == len(chunks)  # all strings should match 42 or 31
+                and s[0] == 1  # first 2 matches should be 42
                 and s[1] == 1
-                and s[len(s) - 1] == 0
-                and len(s) - 1 - s[::-1].index(1) < s.index(0)
-                and sum(s) > len(s) // 2
+                and s[len(s) - 1] == 0  # string ends in 31
+                and len(s) - 1 - s[::-1].index(1) < s.index(0)  # no 42 after 31
+                and sum(s)
+                > len(s) // 2  # 1+ 42 and 2 ( 42, 32) thus number of 42 is more than 31
             ):
                 count += 1
 
