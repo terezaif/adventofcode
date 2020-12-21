@@ -35,11 +35,24 @@ from days.day17 import get_active_cubes
 from days.day18 import get_sum_arithmetics
 from days.day19 import get_msg_count
 from days.day19 import get_msg_count_2
+from days.day20 import get_corners
+from days.day21 import get_goodfood_count
+from days.day21 import get_badfood
 
-print("Puzzle for day19:")
-input19 = get_string_input_array(path="data/day19.txt")
-print(get_msg_count(input19))
-print(get_msg_count_2(input19))
+print("Puzzle for day21:")
+input21 = get_string_input_array(path="data/day21.txt")
+print(get_goodfood_count(input21))
+print(get_badfood(input21))
+
+# print("Puzzle for day20:")
+# input20 = get_string_input_array(path="data/day20.txt")
+# print(get_count(input20))
+# print(get_count_2(input20))
+
+# print("Puzzle for day19:")
+# input19 = get_string_input_array(path="data/day19.txt")
+# print(get_msg_count(input19))
+# print(get_msg_count_2(input19))
 
 # print("Puzzle for day18:")
 # input18 = get_string_input_array(path="data/day18.txt")
