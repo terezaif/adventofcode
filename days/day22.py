@@ -14,7 +14,7 @@ def parse_input(input):
     return p1, p2
 
 
-def get_count(input: list) -> int:
+def get_winner(input: list) -> int:
     p1, p2 = parse_input(input)
     while len(p1) > 0 and len(p2) > 0:
         if p1[0] > p2[0]:
@@ -54,7 +54,7 @@ def rec_subgame(p1, p2):
     return p1, p2
 
 
-def get_count_2(input: list) -> int:
+def get_winner_2(input: list) -> int:
 
     p1, p2 = parse_input(input)
     p1, p2 = rec_subgame(p1, p2)
