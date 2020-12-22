@@ -38,6 +38,14 @@ from days.day19 import get_msg_count_2
 from days.day20 import get_corners
 from days.day21 import get_goodfood_count
 from days.day21 import get_badfood
+from days.day22 import get_count
+from days.day22 import get_count_2
+
+print("Puzzle for day22:")
+input22 = get_string_input_array(path="data/day22.txt")
+print(get_count(input22))
+print(get_count_2(input22))
+
 
 print("Puzzle for day21:")
 input21 = get_string_input_array(path="data/day21.txt")
