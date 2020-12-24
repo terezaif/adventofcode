@@ -40,17 +40,32 @@ from days.day21 import get_goodfood_count
 from days.day21 import get_badfood
 from days.day22 import get_winner
 from days.day22 import get_winner_2
+from days.day23 import get_seq
 
-print("Puzzle for day22:")
-input22 = get_string_input_array(path="data/day22.txt")
-print(get_winner(input22))
-print(get_winner_2(input22))
+# from days.day23 import get_count_2
+from days.day24 import get_count
+from days.day24 import get_count_2
+
+print("Puzzle for day24:")
+input24 = get_string_input_array(path="data/day24.txt")
+print(get_count(input24))
+print(get_count_2(input24))
+
+# print("Puzzle for day23:")
+# input23 = get_string_input_array(path="data/day23.txt")
+# print(get_seq(input23))
+# print(get_count_2(input23, 10 ** 7, 10 ** 6))
+
+# print("Puzzle for day22:")
+# input22 = get_string_input_array(path="data/day22.txt")
+# print(get_winner(input22))
+# print(get_winner_2(input22))
 
 
-print("Puzzle for day21:")
-input21 = get_string_input_array(path="data/day21.txt")
-print(get_goodfood_count(input21))
-print(get_badfood(input21))
+# print("Puzzle for day21:")
+# input21 = get_string_input_array(path="data/day21.txt")
+# print(get_goodfood_count(input21))
+# print(get_badfood(input21))
 
 # print("Puzzle for day20:")
 # input20 = get_string_input_array(path="data/day20.txt")
