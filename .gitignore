@@ -131,5 +131,6 @@ dmypy.json
 
 .DS_Store
 
-data/
-test/data
+2020/data/
+2020/test/data
+2020/days/*notmine*

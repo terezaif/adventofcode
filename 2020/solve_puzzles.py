@@ -46,10 +46,17 @@ from days.day23 import get_seq
 from days.day24 import get_count
 from days.day24 import get_count_2
 
-print("Puzzle for day24:")
-input24 = get_string_input_array(path="data/day24.txt")
-print(get_count(input24))
-print(get_count_2(input24))
+from days.day25 import get_handshake
+
+
+print("Puzzle for day25:")
+input25 = get_string_input_array(path="data/day25.txt")
+print(get_handshake(input25))
+
+# print("Puzzle for day24:")
+# input24 = get_string_input_array(path="data/day24.txt")
+# print(get_count(input24))
+# print(get_count_2(input24))
 
 # print("Puzzle for day23:")
 # input23 = get_string_input_array(path="data/day23.txt")
