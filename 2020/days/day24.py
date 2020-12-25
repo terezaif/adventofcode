@@ -50,7 +50,6 @@ def get_count(input: list) -> int:
     tiles, tiles_3 = parse_input(input)
     ts = {}
     for i, t in enumerate(tiles):
-        # print(i,t)
         coords = tuple(reduce(add_vectors, t))
         ts[coords] = ts.setdefault(coords, 0) + 1
     return len([k for k, v in ts.items() if v % 2 != 0])
@@ -79,7 +78,6 @@ def shuffle(black, white):
         ne = get_neighbors(b)
         bne = ne.intersection(black)
         if len(bne) == 0 or len(bne) > 2:
-            # print("b ", b, " has 0 or  m2 bne: ", bne)
             nw.add(b)
         else:
             nb.add(b)

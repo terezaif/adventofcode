@@ -4,9 +4,6 @@ import math
 def get_bus(input: list) -> int:
     ts = int(input[0])
     buses = [int(bus) for bus in input[1].split(",") if bus != "x"]
-    # print(ts)
-    # print(buses)
-
     closest_bus = 1
     min_diff = ts
 
@@ -17,13 +14,6 @@ def get_bus(input: list) -> int:
             closest_bus = bus
 
     return min_diff * closest_bus
-
-    # the timestamp we look for should have the rule
-    # ts + offset bus n % bus n = 0
-    # => ts % bus n = bus n - offset bus n
-    # ts = bus n - offset n + bus n * i
-    # for all busses
-    # in order to go through as few numbers as possible we take the last bus in the list as iteration check
 
 
 def get_bus_2(input: list) -> int:

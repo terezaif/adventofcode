@@ -1,7 +1,4 @@
 def get_first_number(pre: int, input: list) -> int:
-
-    # 3rd number
-    # print(input[pre:])
     for i in range(pre, len(input) - pre):
         if check_if_pairs(input[i : pre + i], input[pre + i]) is False:
             return input[pre + i]
@@ -13,9 +10,7 @@ def check_if_pairs(numbers: list, x: int):
         number1 = numbers[index1]
         for index2 in range(index1, len(numbers)):
             number2 = numbers[index2]
-            # print(number1, number2,number1 + number2, x)
             if number1 + number2 == x:
-                # print(number1, number2, x)
                 return True
     return False
 
@@ -30,7 +25,6 @@ def get_list_ends(x, input: list) -> int:
 
 def find_range(le, numbers, x):
     for i in range(0, len(numbers) - le):
-        # print(numbers[i:le+i], sum(numbers[i:le+i]), x)
         if sum(numbers[i : le + i]) == x:
             return min(numbers[i : le + i]), max(numbers[i : le + i])
 

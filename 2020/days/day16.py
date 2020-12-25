@@ -13,8 +13,6 @@ def get_prod_right(input: list, starts: str) -> int:
     valid_tickets = [
         ticket for ticket in nearby_tickets if check_ticket_correct(rules, ticket)
     ]
-    # for each rule check all numbers at a postion in ticket
-    # if it holds then rule can be that position
     rules_pos = {}
     postions = len(your_ticket)
     for p in range(0, postions):
@@ -30,16 +28,12 @@ def get_prod_right(input: list, starts: str) -> int:
             ):
                 rules_pos.setdefault(r[0], []).append(p)
 
-    # identify which rule pos pair is only once.. add it to another dict and pop it from the others till dict is empty
     pos_w_start = []
     while rules_pos != {}:
         r, p = next((k, v[0]) for k, v in rules_pos.items() if len(v) == 1)
-        # for r, p in uniqs:
         if r.startswith(starts):
             pos_w_start.append(p)
-        # remove rule from dict
         rules_pos.pop(r)
-        # remove pos from other rules
         for k, v in rules_pos.items():
             if p in v:
                 rules_pos[k].remove(p)

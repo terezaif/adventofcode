@@ -7,9 +7,7 @@ def get_nth_spoken(input: list, stop: int = 2020) -> int:
             n = nums[i]
         else:
             n = 0 if prev not in turns else i - 1 - turns.get(prev)
-            # print(i+1, prev, n, turns.get(prev))
 
         turns[prev] = i - 1
-        # print(turns)
         prev = n
     return n

@@ -78,20 +78,16 @@ def get_memsum_2(input: list) -> int:
 
         for mem in operations[1:]:
             number = int(mem[1])
-            # number = setBits(mem[1], set_bits)
-            # number = clearBits(number, clear_bits)
             mem_loc = setBits(mem[0], set_bits)
             if memory_locs_bits == []:
                 memory[mem_loc] = number
             for mem_set_bits in memory_locs_bits:
                 new_mem_loc = resetBits(mem_loc, mem_set_bits)
-                # print(number, "->", new_mem_loc)
                 memory[new_mem_loc] = number
         return memory
 
     memory = {}
     for operations in input:
-        # print(operations)
         memory.update(update_memory(operations))
 
     return sum(memory.values())

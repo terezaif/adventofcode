@@ -130,7 +130,9 @@ dmypy.json
 .pyre/
 
 .DS_Store
+.vscode
 
 2020/data/
 2020/test/data
 2020/days/*notmine*
+stats/*.csv

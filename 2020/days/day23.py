@@ -18,13 +18,8 @@ def parse_input_2(input, max: int = 1000000):
 def run_game(circle, sc, moves):
 
     cur = circle[0]
-    # one = circle.index(1)
-    # circle = circle[one:] + circle[:one]
-    # initial = circle[:]
     m = max(circle) + 1
     size = len(circle)
-
-    # dsc = sc + sc
     for move in tqdm(range(moves)):
         cur = circle.pop(0)
         p3 = [circle.pop(0) for i in range(0, 3)]
@@ -32,22 +27,10 @@ def run_game(circle, sc, moves):
         n = next(
             ((cur - k + m) % m for k in range(1, 5) if (cur - k + m) % m not in p3)
         )
-        # d = next(index for index, value in enumerate(circle) if value == n)
         d = next(size - 5 - i for i in range(0, size - 4) if circle[size - 5 - i] == n)
-        # d = circle.index(n)
-        # print(d)
-        # print(d)
 
         circle[d + 1 : d + 1] = p3
         circle.append(cur)
-
-        # one = circle.index(1)
-        # circle = circle[one:] + circle[:one]
-        # i = circle.index(cur)
-        # i = (i+1)%size
-        # moves -= 1
-        # if(circle == initial):
-        # 	print("pattern repeating at: moves=",moves)
 
     one = circle.index(1)
     circle = circle[one:] + circle[:one]

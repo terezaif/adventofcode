@@ -3,8 +3,6 @@ COLUMN_COUNT = 8
 
 
 def get_seat_id(input: str) -> int:
-    # FBFBBFFRLR
-    # range is 0- 127
     operations = list(input)
     front = 0
     back = ROW_COUNT - 1

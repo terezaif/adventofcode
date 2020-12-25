@@ -12,19 +12,6 @@ allowed = [1, 2, 3]
 extra = 3
 default = 0
 
-# If you use every adapter in your bag at once,
-# what is the distribution of joltage
-# differences between the charging
-# outlet, the adapters, and your device?
-
-# In this example, w
-# hen using every adapter,
-# there are 7 differences of 1 jolt
-# and 5 differences of 3 jolts.
-
-# hat is the number of 1-jolt differences
-# multiplied by the number of 3-jolt differences?
-
 
 def get_diff(input: list) -> int:
     yours = max(input) + extra
