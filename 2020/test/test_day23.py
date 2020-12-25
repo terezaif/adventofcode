@@ -3,7 +3,7 @@ from days.day23 import get_seq
 from days.day23 import get_count_2
 from utils.reading_data import get_string_input_array
 
-input = get_string_input_array(path="test/data/day23.txt")
+input = get_string_input_array(path="2020/test/data/day23.txt")
 
 
 def test_get_count_10():

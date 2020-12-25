@@ -2,7 +2,7 @@ from days.day20 import get_corners
 
 from utils.reading_data import get_string_input_array
 
-input = get_string_input_array(path="test/data/day20.txt")
+input = get_string_input_array(path="2020/test/data/day20.txt")
 
 
 def test_get_corners():

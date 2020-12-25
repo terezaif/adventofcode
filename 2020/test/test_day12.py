@@ -4,7 +4,7 @@ from utils.reading_data import get_string_input_matrix_r
 
 
 regex = r"(\w)(\d*)"
-input = get_string_input_matrix_r(path="test/data/day12.txt", regex=regex)
+input = get_string_input_matrix_r(path="2020/test/data/day12.txt", regex=regex)
 
 
 def test_get_distance():

@@ -2,7 +2,7 @@ from days.day9 import get_first_number
 from days.day9 import get_list_ends
 from utils.reading_data import get_int_input_array
 
-input = get_int_input_array(path="test/data/day9.txt")
+input = get_int_input_array(path="2020/test/data/day9.txt")
 
 
 def test_get_count():

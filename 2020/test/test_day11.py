@@ -8,7 +8,7 @@ from utils.reading_data import (
 
 
 def test_get_seat_count():
-    input = get_string_input_matrix_w_padding(path="test/data/day11.txt")
+    input = get_string_input_matrix_w_padding(path="2020/test/data/day11.txt")
     expected = 37
     actual = get_seat_count(input)
     assert expected == actual
@@ -16,7 +16,7 @@ def test_get_seat_count():
 
 @pytest.mark.skip(reason="takes too long")
 def test_get_seat_count_2():
-    input = get_string_input_matrix(path="test/data/day11.txt")
+    input = get_string_input_matrix(path="2020/test/data/day11.txt")
     expected = 26
     actual = get_seat_count_2(input)
     assert expected == actual

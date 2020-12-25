@@ -23,7 +23,7 @@ input2 = [
     "dark blue bags contain 2 dark violet bags.",
     "dark violet bags contain no other bags.",
 ]
-input3 = get_string_input_array(path="test/data/day7.txt")
+input3 = get_string_input_array(path="2020/test/data/day7.txt")
 
 
 def test_get_count():

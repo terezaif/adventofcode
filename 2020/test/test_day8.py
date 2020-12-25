@@ -2,7 +2,7 @@ from days.day8 import get_acc
 from days.day8 import get_acc_2
 from utils.reading_data import get_string_input_array
 
-input = get_string_input_array(path="test/data/day8.txt")
+input = get_string_input_array(path="2020/test/data/day8.txt")
 
 
 def test_get_acc():
