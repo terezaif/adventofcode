@@ -1,6 +1,3 @@
-from tqdm import tqdm
-
-
 def get_handshake(input: list) -> int:
     cp = int(input[0])
     dp = int(input[1])
