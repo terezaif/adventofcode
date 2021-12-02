@@ -5,7 +5,7 @@ import os
 session = os.environ.get("AOC_SESSION")
 
 year = 2021
-users = [1015140, 65509]
+users = [1015140, 65509, 966061]
 
 for user in users:
     s = requests.Session()
