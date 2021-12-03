@@ -135,4 +135,4 @@ dmypy.json
 2020/data/
 2020/test/data
 2020/days/*notmine*
-stats/*.csv
+#stats/*.csv
