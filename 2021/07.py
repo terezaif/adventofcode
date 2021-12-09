@@ -19,8 +19,8 @@ def part2(data):
     avg_l = int(avg)
     avg_h = round(avg)
 
-    cost_l = [dd for d in hor for dd in range(1, abs(d - avg_l) + 1)]
-    cost_h = [dd for d in hor for dd in range(1, abs(d - avg_h) + 1)]
+    cost_l = [abs(h - avg_l) * (abs(h - avg_l) + 1) / 2 for h in hor]
+    cost_h = [abs(h - avg_h) * (abs(h - avg_h) + 1) / 2 for h in hor]
 
     return min(sum(cost_l), sum(cost_h))
 
