@@ -1,5 +1,4 @@
 from aocd import get_data
-import re
 
 
 def part1(data):
