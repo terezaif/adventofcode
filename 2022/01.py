@@ -7,10 +7,9 @@ def part1(data):
     return m
 
 
-
 def part2(data):
     calories = [sum([int(c) for c in s.split("\n")]) for s in data.split("\n\n")]
-    calories.sort(reverse = True)
+    calories.sort(reverse=True)
     top = sum(calories[0:3])
     return top
 
