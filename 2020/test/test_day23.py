@@ -21,5 +21,5 @@ def test_get_count():
 @pytest.mark.skip(reason="takes too long")
 def test_get_count_2():
     expected = 149245887792
-    actual = get_count_2(input, 100, 10 ** 6)
+    actual = get_count_2(input, 100, 10**6)
     assert expected == actual
