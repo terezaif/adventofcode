@@ -66,11 +66,11 @@ def get_neighbors_3(t, edim: int = 1):
         s.remove(t)
     elif edim == 2:
         n = [
-            (i, j, k, l)
+            (i, j, k, li)
             for i in range(t[0] - 1, t[0] + 2)
             for j in range(t[1] - 1, t[1] + 2)
             for k in range(t[2] - 1, t[2] + 2)
-            for l in range(t[3] - 1, t[3] + 2)
+            for li in range(t[3] - 1, t[3] + 2)
         ]
         s = set(n)
         s.remove(t)

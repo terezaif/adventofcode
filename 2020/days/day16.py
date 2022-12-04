@@ -76,7 +76,7 @@ def get_rules_and_tickets(input: list):
             p = parse("{}: {:d}-{:d} or {:d}-{:d}", line)
             rules.append([p[0], p[1], p[2], p[3], p[4]])
         elif inputtype == "y":
-            your_ticket = [int(l) for l in line.split(",")]
+            your_ticket = [int(li) for li in line.split(",")]
         elif inputtype == "n":
-            nearby_tickets.append([int(l) for l in line.split(",")])
+            nearby_tickets.append([int(li) for li in line.split(",")])
     return rules, your_ticket, nearby_tickets

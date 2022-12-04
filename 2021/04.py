@@ -13,12 +13,12 @@ def get_first_last_winning_boards(data):
     number_board = 0
     while draw < len(numbers):
         numbers_set = set(numbers[:draw])
-        l = 0
+        li = 0
         for line in boards:
             s = set([int(n) for n in line])
             if s.issubset(numbers_set):
-                number_board = int(l / bsize)
-                if bingo == False:
+                number_board = int(li / bsize)
+                if bingo is False:
                     winner_boards.add(number_board)
                     number_first_board = number_board
                     number_first_draw = numbers[draw - 1]
@@ -29,13 +29,12 @@ def get_first_last_winning_boards(data):
                     number_last_draw = numbers[draw - 1]
                     numbers_last_set = numbers_set
                     winner_boards.add(number_board)
-            if l % bsize == 0:  # checking verticals and diagonals
+            if li % bsize == 0:  # checking verticals and diagonals
                 for v in range(bsize):
-                    col = [int(b[v]) for b in boards[l : l + bsize]]
-                    s = set([int(b[v]) for b in boards[l : l + bsize]])
+                    s = set([int(b[v]) for b in boards[li : li + bsize]])
                     if s.issubset(numbers_set):
-                        number_board = int(l / bsize)
-                        if bingo == False:
+                        number_board = int(li / bsize)
+                        if bingo is False:
                             winner_boards.add(number_board)
                             number_first_board = number_board
                             number_first_draw = numbers[draw - 1]
@@ -46,7 +45,7 @@ def get_first_last_winning_boards(data):
                             number_last_draw = numbers[draw - 1]
                             numbers_last_set = numbers_set
                             winner_boards.add(number_board)
-            l += 1
+            li += 1
         draw += 1
 
     # first board

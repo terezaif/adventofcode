@@ -4,13 +4,13 @@ from aocd import get_data
 def part1(data):
     depths = [s for s in data.split("\n")]
 
-    return 150
+    return len(depths)
 
 
 def part2(data):
     depths = [s for s in data.split("\n")]
 
-    return 900
+    return len(depths)
 
 
 def test_part1():

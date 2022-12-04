@@ -14,7 +14,6 @@ def part1(data, days):
         jellyfish[7] = jellyfish[8]
         jellyfish[8] = jellyfish[reproduce]
         jellyfish[reproduce] = jellyfish[reproduce] + grownups
-        fish = sum(jellyfish)
 
     return sum(jellyfish)
 

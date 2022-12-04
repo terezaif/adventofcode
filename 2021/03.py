@@ -3,11 +3,11 @@ from aocd import get_data
 
 def part1(data):
     splits = [list(s) for s in data.split("\n")]
-    l = len(splits[0])
-    mask = "".join(["1" for i in range(l)])
+    li = len(splits[0])
+    mask = "".join(["1" for i in range(li)])
     g = [
         str(int(sum([int(codes[i]) for codes in splits]) >= len(splits) / 2))
-        for i in range(0, l)
+        for i in range(0, li)
     ]
     gamma = int("".join(g), 2)
     return gamma * (gamma ^ int(mask, 2))
@@ -15,7 +15,6 @@ def part1(data):
 
 def part2(data):
     splits = [list(s) for s in data.split("\n")]
-    l = len(splits[0])
     oxygen = splits.copy()
     co2 = splits.copy()
     i = 0

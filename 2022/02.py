@@ -2,6 +2,7 @@ from aocd import get_data
 
 rps = {"A": 0, "B": 1, "C": 2, "X": 0, "Y": 1, "Z": 2}
 
+
 # [4, 1, 7, 9]
 def game2(input) -> int:
     f = rps.get(input[0])
