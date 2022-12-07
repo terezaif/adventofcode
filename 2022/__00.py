@@ -2,15 +2,15 @@ from aocd import get_data
 
 
 def part1(data):
-    depths = [s for s in data.split("\n")]
+    input = [s for s in data.split("\n")]
 
-    return len(depths)
+    return len(input)
 
 
 def part2(data):
-    depths = [s for s in data.split("\n")]
+    input = [s for s in data.split("\n")]
 
-    return len(depths)
+    return len(input)
 
 
 def test_part1():
