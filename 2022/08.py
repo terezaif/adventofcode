@@ -25,8 +25,8 @@ def part1(data):
 def part2(data):
     input = [list(s) for s in data.split("\n")]
     w, h = len(input[0]), len(input)
-    # get distance of larger tree on line/col (either direction in order of furthest from tree)
-    forest_l = [
+    # get distance to the first larger tree on line/col or edge
+    view_stop = [
         math.prod(
             [
                 next(
@@ -55,7 +55,7 @@ def part2(data):
         for i in range(1, w - 1)
     ]
 
-    return max(forest_l)
+    return max(view_stop)
 
 
 def test_part1():
