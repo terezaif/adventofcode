@@ -21,7 +21,6 @@ def part1(data):
                 t = prevh
                 pos.add(tuple(t))
             n -= 1
-    print(pos)
     return len(pos)
 
 
