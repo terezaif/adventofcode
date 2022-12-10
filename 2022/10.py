@@ -19,12 +19,12 @@ def part2(data):
     x, c = 1, 0
     str = [[]]
     for line in data.split("\n"):
-        p = "#" if abs(c % w - x) <= 1 else "."
+        p = "#" if abs(c % w - x) <= 1 else " "
         str.append([p]) if len(str) <= c // w else str[c // w].append(p)
         c += 1
         match line.split(" "):
             case ["addx", d]:
-                p = "#" if abs(c % w - x) <= 1 else "."
+                p = "#" if abs(c % w - x) <= 1 else " "
                 str.append([p]) if len(str) <= c // w else str[c // w].append(p)
                 c += 1
                 x += int(d)
@@ -39,7 +39,7 @@ def test_part1():
 
 
 def test_part2():
-    assert part2(test_data) == "###...###...###...###...###...###...###."
+    assert part2(test_data) == "###   ###   ###   ###   ###   ###   ### "
 
 
 data = get_data(day=10, year=2022)
