@@ -2,22 +2,16 @@ from aocd import get_data
 
 
 def part1(data):
-    x, c = 1, 1
-    xs = [[c, x]]
-    cs = [20, 60, 100, 140, 180, 220]
+    x = 1
+    xs = [x]
     for line in data.split("\n"):
+        xs.append(x)
         match line.split(" "):
-            case ["noop"]:
-                xs.append([c, x])
-                c += 1
             case ["addx", d]:
-                xs.append([c, x])
-                xs.append([c + 1, x])
-                n = int(d)
-                c += 2
-                x += n
+                xs.append(x)
+                x += int(d)
 
-    return sum([i[0] * i[1] for i in xs if i[0] in cs])
+    return sum([i * xs[i] for i in range(20, 260, 40)])
 
 
 def part2(data):
@@ -25,20 +19,15 @@ def part2(data):
     x, c = 1, 0
     str = [[]]
     for line in data.split("\n"):
+        p = "#" if abs(c % w - x) <= 1 else "."
+        str.append([p]) if len(str) <= c // w else str[c // w].append(p)
+        c += 1
         match line.split(" "):
-            case ["noop"]:
-                p = "#" if c % w in [x - 1, x, x + 1] else "."
-                str.append([p]) if len(str) <= c // w else str[c // w].append(p)
-                c += 1
             case ["addx", d]:
-                p = "#" if c % w in [x - 1, x, x + 1] else "."
+                p = "#" if abs(c % w - x) <= 1 else "."
                 str.append([p]) if len(str) <= c // w else str[c // w].append(p)
                 c += 1
-                p = "#" if c % w in [x - 1, x, x + 1] else "."
-                str.append([p]) if len(str) <= c // w else str[c // w].append(p)
-                c += 1
-                n = int(d)
-                x += n
+                x += int(d)
 
     [print("".join(s)) for s in str]
 
