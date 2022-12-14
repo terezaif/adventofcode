@@ -4,31 +4,32 @@ from functools import cmp_to_key
 
 # this was r evil
 def check(ll, lr) -> int:
-    if isinstance(ll, int) and isinstance(lr, int):
-        if ll < lr:
-            return 1
-        if ll > lr:
-            return -1
-        return 0
-    elif isinstance(ll, list) and isinstance(lr, list):
-        i = 0
-        while i < len(ll) and i < len(lr):
-            c = check(ll[i], lr[i])
-            if c == 1:
+    match ll, lr:
+        case int(), int():
+            if ll < lr:
                 return 1
-            if c == -1:
+            if ll > lr:
                 return -1
-            i += 1
-        if i < len(lr):
-            return 1
-        elif i < len(ll):
-            return -1
-        else:
             return 0
-    elif isinstance(ll, list) and isinstance(lr, int):
-        return check(ll, [lr])
-    elif isinstance(ll, int) and isinstance(lr, list):
-        return check([ll], lr)
+        case list(), list():
+            i = 0
+            while i < len(ll) and i < len(lr):
+                c = check(ll[i], lr[i])
+                if c == 1:
+                    return 1
+                if c == -1:
+                    return -1
+                i += 1
+            if i < len(lr):
+                return 1
+            elif i < len(ll):
+                return -1
+            else:
+                return 0
+        case list(), int():
+            return check(ll, [lr])
+        case int(), list():
+            return check([ll], lr)
     return 0
 
 
