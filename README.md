@@ -23,7 +23,7 @@ First time.. setting things up with black and flake8 for formatting and pre-comm
 
 Requirements:
 
-- python 3.10.0
+- python 3.12.0
 
 ```bash
 make setup # to setup venv and install stuff
